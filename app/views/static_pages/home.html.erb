@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<h1 class="text-center">Odin Flickr Feed</h1>
+
+		<%= form_tag root_path, method: 'get' %>
+		<%= label_tag "Flickr User ID:" %>
+		<%= text_field_tag :user_id, nil, class: 'form-control' %>
+		<%= submit_tag 'Get User\'s Photos', class: 'btn btn-success' %>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-md-4 col-md-offset-4">
+		  <%= render_flickr_sidebar_widget(user_id = @user_id) %>
+	</div>
+</div>
+
+

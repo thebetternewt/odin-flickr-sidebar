@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>OdinFlickrSidebar</title>
-    <%= csrf_meta_tags %>
+<head>
+<title>OdinFlickrFeed</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-  	<%= render_flickr_sidebar_widget(user_id = '143239217@N08') %>
+<body>
+  <div class="container">
     <%= yield %>
-  </body>
+  </div>
+  
+</body>
 </html>
